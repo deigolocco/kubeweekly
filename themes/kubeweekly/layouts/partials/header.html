@@ -1,0 +1,18 @@
+<!-- <header class="header">
+	<div class="container">
+		<div class="logo">
+			<a class="logo__link" href="{{ "" | relLangURL }}" title="{{ .Site.Title }}" rel="home">
+				<div class="logo__title">{{ .Site.Title }}</div>
+				{{ with .Site.Params.subtitle }}<div class="logo__tagline">{{ . }}</div>{{ end }}
+			</a>
+		</div>
+		{{ partial "menu.html" . }}
+	</div>
+</header> -->
+
+<header class="kubeweekly-main-header">
+  <svg role="image" title="Logo">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+  </svg>
+  <h1>Weekly</h1>
+</header>

@@ -1,0 +1,12 @@
+# Created by https://www.gitignore.io/api/hugo
+# Edit at https://www.gitignore.io/?templates=hugo
+
+### Hugo ###
+# gitginore template for Hugo projects
+# website: https://gohugo.io
+
+# generated files by hugo
+/public/
+/resources/_gen/
+
+# End of https://www.gitignore.io/api/hugo

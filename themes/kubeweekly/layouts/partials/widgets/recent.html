@@ -1,0 +1,16 @@
+{{- $recent := where .Site.RegularPages "Section" "in" .Site.Params.mainSections }}
+{{- $recent_num := (.Site.Params.widgets.recent_num | default 10) }}
+
+{{- if $recent }}
+<h3 class="widget-title">{{ T "recent_title" }}</h3>
+<ul>
+  {{- range first $recent_num $recent }}
+		<li><a href="{{ .RelPermalink }}">{{ .PublishDate.Format "01/02/2006" }} - {{ .Title }}</a></li>
+	{{- end }}
+</ul>
+
+<!-- <div class="load-more">
+  <button id="load-past-editions">Load More</button>
+  <span class="loading"><img src="img/loading.gif"></span>
+</div> -->
+{{- end }}

@@ -1,0 +1,15 @@
+name = "Kubeweekly"
+description = "Kubeweekly is a responsive, clean and content-focused Hugo theme."
+tags = ["blog", "responsive", "widgets", "rss", "disqus", "google analytics", "wordpress"]
+features = ["blog", "responsive", "widgets", "rss", "disqus", "wordpress"]
+min_version = "0.1"
+
+[author]
+  name = "Fuerza Studio"
+  homepage = "http://fuerzastudio.com.br/en/"
+
+# If porting an existing theme
+[original]
+  name = "Mainroad"
+  homepage = "https://themes.gohugo.io/mainroad/"
+  repo = "https://github.com/vimux/mainroad/"
