@@ -31,7 +31,9 @@
     {{ partial "sidebar.html" . }}
     <section class="current-edition">
       <div class="current-edition_wrp">
+        {{ if .IsHome }}
         <h2>Current Edition</h2>
+        {{ end }}
         {{ block "main" . }}
           {{ with .Content }}
 
