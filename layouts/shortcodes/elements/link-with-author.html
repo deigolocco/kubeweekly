@@ -1,0 +1,12 @@
+{{ if (isset .Params "link") and (isset .Params "text") }}
+<p>
+  <a href='{{ .Get "link" }}' target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #3f6bd7;font-weight: normal;text-decoration: none;">
+    <span style="font-size:18px">{{ .Get "text"}}</span>
+  </a>
+  <br>
+  {{ if (isset .Params "author") and (isset .Params "company") }}
+  <span>{{ .Get "author" }},</span>
+  <em>{{ .Get "company" }}</em>
+  {{ end }}
+</p>
+{{ end }}
