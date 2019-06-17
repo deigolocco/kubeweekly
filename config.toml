@@ -22,6 +22,7 @@ googleAnalytics = "" # Enable Google Analytics by entering your tracking id
   toc = true # Enable Table of Contents
   post_navigation = true # Show post navigation at bottom of pages if true
   post_meta = ["date", "categories", "translations"] # Order of post meta information
+  default_post_thumbnail = "https://gallery.mailchimp.com/3885586f8f1175194017967d6/images/fc8c01e4-228d-4593-82fe-4ae7cdd5f832.jpg"
   # customCSS = ["css/custom.css"] # Include custom CSS files
 
 [Params.sidebar]
