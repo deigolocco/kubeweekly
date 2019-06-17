@@ -1,0 +1,11 @@
+{{ if isset .Params "text" }}
+<p style="margin: 10px 0;padding: 0;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 16px;line-height: 150%;text-align: left;">
+  {{ if isset .Params "bold" }}
+  <span style="font-family:lato,helvetica neue,helvetica,arial,sans-serif">
+    <strong>{{ index .Params "text" }}</strong>
+  </span>
+  {{ else }}
+  <span style="font-family:lato,helvetica neue,helvetica,arial,sans-serif">{{ index .Params "text" }}</span>
+  {{ end }}
+</p>
+{{ end }}

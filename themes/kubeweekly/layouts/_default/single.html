@@ -1,31 +1,30 @@
 {{ define "main" }}
-
 <p>
   <a class="back-button" href="{{.Site.BaseURL}}">&lt;&lt; Back</a>
 </p>
 <main class="main" role="main">
 	<article class="post">
-    {{- if .Params.is_new }}
-      <header class="post__header">
-        <h1 class="post__title">{{ .Title }}</h1>
-        {{- with .Params.lead }}
-        <p class="post__lead">{{ . }}</p>
-        {{- end }}
-        {{ with partial "post_meta.html" . -}}
-        <div class="post__meta meta">{{ . }}</div>
-        {{- end }}
-      </header>
-      {{- if .Params.thumbnail }}
-      <figure class="post__thumbnail">
-        <img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
-      </figure>
-      {{- end }}
-      {{- partial "post_toc.html" . -}}
-    {{- end }}
-		<div class="content post__content clearfix">
-			{{ .Content }}
-		</div>
-		{{ partial "post_tags.html" . }}
-	</article>
+    {{ if .Params.is_new }}
+      {{ partial "single/style.html" . }}
+      <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 0;width: 100%;background-color: #FAFAFA;">
+        <tr>
+          <td align="center" valign="top" id="bodyCell" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;height: 100%;margin: 0;padding: 10px;width: 100%;border-top: 0;">
+            {{ partial "single/title.html" . }}
+            {{ partial "single/thumbnail.html" . }}
+            {{ partial "single/line.html" }}
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" id="templateBody" style="background:#ffffff none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #ffffff;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 2px solid #EAEAEA;padding-top: 0;padding-bottom: 9px;">
+            {{ partial "single/events.html" . }}
+            {{ partial "single/line.html" . }}
+            {{ .Content }}
+          </td>
+        </tr>
+      </table>
+    {{ else }}
+      {{ .Content }}
+    {{ end }}
+  </article>
 </main>
 {{ end }}

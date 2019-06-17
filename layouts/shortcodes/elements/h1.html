@@ -1,0 +1,5 @@
+{{ if isset .Params "text" }}
+<h1 style="display: block;margin: 0;padding: 0;color: #202020;font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 26px;font-style: normal;font-weight: bold;line-height: 125%;letter-spacing: normal;text-align: left;">
+  <span style="font-family:lato,helvetica neue,helvetica,arial,sans-serif">{{ index .Params "text" }}</span>
+</h1>
+{{ end }}

@@ -1,0 +1,5 @@
+{{ if (isset .Params "link") and (isset .Params "text") }}
+<a href='{{ .Get "link" }}' target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #3f6bd7;font-weight: normal;text-decoration: none;">
+  <span style="font-size:18px">{{ .Get "text"}}</span>
+</a>
+{{ end }}
