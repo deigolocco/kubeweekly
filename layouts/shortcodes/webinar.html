@@ -1,20 +1,6 @@
-<table align="left" border="0" cellpadding="0" cellspacing="0" width="300" class="mcnBoxedTextContentContainer" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-  <tbody>
-    <tr>
-      <td class="mcnBoxedTextContentColumn" style="padding-top: 9px;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-        <table border="0" cellspacing="0" class="mcnTextContentContainer" width="100%" style="min-width: 100% !important;background-color: #404040;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-          <tbody>
-            <tr>
-              <td valign="top" class="mcnTextContent" style="padding: 18px;color: #F2F2F2;font-family: Helvetica;font-size: 14px;font-weight: normal;text-align: center;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;line-height: 150%;">
-                <div style="text-align: left;">{{ .Inner }}</div>
-                <span style="font-family:lato,helvetica neue,helvetica,arial,sans-serif">
-                  <a href='{{ .Get "button_link"}}' style="background-color: #3f6bd7;padding: 14px 28px 14px 28px;line-height: 18px !important;letter-spacing: .125em;text-transform: uppercase;font-size: 14px;font-family: 'Lato';font-weight: 400;color: #ffffff;text-decoration: none;display: inline-block;-webkit-text-size-adjust: none;mso-hide: all;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;" target="_blank" rel="noopener noreferrer">{{ .Get "button_text"}}</a>
-                </span>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div class="webinar">
+  {{ .Inner | markdownify }}
+  <a href='{{ .Get "button_link"}}' class="btn">
+    {{ .Get "button_text"}}
+  </a>
+</div>
