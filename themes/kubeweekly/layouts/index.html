@@ -12,7 +12,7 @@
 	{{- end }}
 	{{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
   {{- range first 1 $pages }}
-		{{ .Content }}
+    {{ partial "single/content" . }}
 	{{- end }}
 </main>
 {{ end }}
