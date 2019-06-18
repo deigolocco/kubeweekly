@@ -1,3 +1,9 @@
+{{ $encoded_title := strings.TrimPrefix "=" (querify "" .Title) }}
+{{ $link := print "http:" .Permalink }}
+{{ $encoded_link := strings.TrimPrefix "=" (querify "" $link) }}
+{{ $twitter := print "http://twitter.com/intent/tweet?text=" $encoded_title "&url=" $encoded_link }}
+{{ $facebook := print "http://www.facebook.com/sharer/sharer.php?u=" $encoded_link }}
+
 <td valign="top" id="templateFooter" style="background:#fafafa none no-repeat center/cover;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #fafafa;background-image: none;background-repeat: no-repeat;background-position: center;background-size: cover;border-top: 0;border-bottom: 0;padding-top: 9px;padding-bottom: 9px;">
 	<table border="0" cellpadding="0" cellspacing="0" width="100%" class="mcnShareBlock" style="min-width: 100%;border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
     <tbody class="mcnShareBlockOuter">
@@ -15,9 +21,9 @@
                               <tbody>
                                 <tr>
                                   <td align="left" valign="top" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
-                                    {{ partial "single/social" (dict "name" "Twitter" "icon" "https://cdn-images.mailchimp.com/icons/social-block-v2/outline-dark-twitter-48.png" "link" "http://twitter.com/intent/tweet" ) }}
+                                    {{ partial "single/social" (dict "name" "Twitter" "icon" "https://cdn-images.mailchimp.com/icons/social-block-v2/outline-dark-twitter-48.png" "link" $twitter ) }}
                                     {{ partial "single/social" (dict "name" "Forward" "icon" "https://cdn-images.mailchimp.com/icons/social-block-v2/outline-dark-forwardtofriend-48.png" "link" "mailto:kubeweekly@cncf.io" ) }}
-                                    {{ partial "single/social" (dict "name" "Share" "icon" "https://cdn-images.mailchimp.com/icons/social-block-v2/outline-dark-facebook-48.png" "link" "http://www.facebook.com/sharer/sharer.php" ) }}
+                                    {{ partial "single/social" (dict "name" "Share" "icon" "https://cdn-images.mailchimp.com/icons/social-block-v2/outline-dark-facebook-48.png" "link" $facebook ) }}
                                   </td>
                                 </tr>
                               </tbody>
@@ -60,8 +66,8 @@
                     <img data-file-id="2767199" height="31" src="https://gallery.mailchimp.com/3885586f8f1175194017967d6/images/ddb6b1b3-f513-43e2-8f0e-83f6794d7629.png" width="200" style="border: 0;height: auto !important;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;">
                   </p>
                   <p>
-                    <em>Copyrig</em>
-                    <em>ht © {{ now.Format "2006" }} Cloud Native Computing Foundation</em>
+                    <em>Copyright © {{ now.Format "2006" }}</em>
+                    <em>Cloud Native Computing Foundation</em>
                     <em>, All rights </em>
                     <span style="font-family:lato,helvetica neue,helvetica,arial,sans-serif">
                       <em>reserved.</em>
