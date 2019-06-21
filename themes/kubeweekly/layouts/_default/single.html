@@ -4,6 +4,10 @@
 </p>
 <main class="main" role="main">
 	<article class="post">
+    {{ $.Scratch.Add "json" (dict "events" .Params.events "title" .Title "thumbnail" .Site.Params.default_post_thumbnail ) }}
+    <script class="post-json" type="application/ld+json">
+      {{ $.Scratch.Get "json" }}
+    </script>
     {{ partial "single/content" . }}
   </article>
 </main>

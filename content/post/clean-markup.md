@@ -76,12 +76,13 @@ Scott MacCarty, *RedHat*
 {{< /section-wrapper>}}
 
 ---
-
+{{< section-wrapper class="the-editorial">}}
 # The Editorial
 
 *Articles, announcements, and more that give you a high-level overview of challenges and features.*
 
 [Kubernetes Advantage: Considerations for a Multi-Cloud World](https://www.informationweek.com/kubernetes-advantage-considerations-for-a-multi-cloud-world/a/d-id/1334879)
 Kip Compton, *Cisco*
+{{< /section-wrapper>}}
 
 
