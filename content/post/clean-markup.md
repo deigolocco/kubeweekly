@@ -2,7 +2,7 @@
   "title": "KubeWeekly #Clean Markup",
   "url": "2019/06/14/kubeweekly-clean-markup",
   "date": "2019-06-14",
-  "is_new": false,
+  "is_new": true,
   "events": [
     {
       "image": "https://gallery.mailchimp.com/3885586f8f1175194017967d6/images/7beb9bd9-42f8-4c3b-8471-8668aad58c9c.jpg",
@@ -29,31 +29,42 @@ At a time when open-source enterprise software is at a crossroads, wracked by de
 
 ---
 
-{{< section-wrapper >}}
+{{< section-wrapper class="webinars">}}
 # Webinars
 
 *Upcoming webinars on cloud native technologies.*
+
+{{< webinar
+  button_text="REGISTER NOW »"
+  button_link="https://zoom.us/webinar/register/6115596815136/WN_WQpZ2qh_SZylOJETUzGelA" >}}
+  **Security and Day 2 Operations with Harbor**
+
+  *Michael Michael, VMware*
+
+  **June 13 @ 9:00 am – 10:00 am PDT**
+{{< /webinar >}}
+
+{{< webinar
+  button_text="REGISTER NOW »"
+  button_link="https://zoom.us/webinar/register/6115596815136/WN_WQpZ2qh_SZylOJETUzGelA" >}}
+  **Security and Day 2 Operations with Harbor**
+
+  *Michael Michael, VMware*
+
+  **June 13 @ 9:00 am – 10:00 am PDT**
+{{< /webinar >}}
+
+{{< webinar
+  button_text="REGISTER NOW »"
+  button_link="https://zoom.us/webinar/register/6115596815136/WN_WQpZ2qh_SZylOJETUzGelA" >}}
+  **Security and Day 2 Operations with Harbor**
+
+  *Michael Michael, VMware*
+
+  **June 13 @ 9:00 am – 10:00 am PDT**
+{{< /webinar >}}
+
 {{< /section-wrapper >}}
-
-{{< webinar
-  button_text="REGISTER NOW »"
-  button_link="https://zoom.us/webinar/register/6115596815136/WN_WQpZ2qh_SZylOJETUzGelA" >}}
-  **Security and Day 2 Operations with Harbor**
-
-  *Michael Michael, VMware*
-
-  **June 13 @ 9:00 am – 10:00 am PDT**
-{{< /webinar >}}
-
-{{< webinar
-  button_text="REGISTER NOW »"
-  button_link="https://zoom.us/webinar/register/6115596815136/WN_WQpZ2qh_SZylOJETUzGelA" >}}
-  **Security and Day 2 Operations with Harbor**
-
-  *Michael Michael, VMware*
-
-  **June 13 @ 9:00 am – 10:00 am PDT**
-{{< /webinar >}}
 
 ---
 
@@ -84,5 +95,3 @@ Scott MacCarty, *RedHat*
 [Kubernetes Advantage: Considerations for a Multi-Cloud World](https://www.informationweek.com/kubernetes-advantage-considerations-for-a-multi-cloud-world/a/d-id/1334879)
 Kip Compton, *Cisco*
 {{< /section-wrapper>}}
-
-

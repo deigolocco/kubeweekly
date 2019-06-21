@@ -1,6 +1,10 @@
 <div class="webinar">
-  {{ .Inner | markdownify }}
-  <a href='{{ .Get "button_link"}}' class="btn">
-    {{ .Get "button_text"}}
-  </a>
+  <div class="webinar-content">
+    {{ .Inner | markdownify }}
+  </div>
+  <div class="webinar-button">
+    <a href='{{ .Get "button_link"}}' class="btn">
+      {{ .Get "button_text"}}
+    </a>
+  </div>
 </div>
